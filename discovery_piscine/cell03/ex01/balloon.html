@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="dot"></span>
+    </div>
+    <script>
+        var size = 200;
+        var click = 0;
+        const anim_out = () => {
+            if (size > 205) {
+                size -= 5;
+                document.getElementById("dot").style.height = (size) + "px";
+                document.getElementById("dot").style.width = (size) + "px";
+            }
+            if (click == 2) {
+                document.getElementById("dot").style.backgroundColor = "green";
+                click = 0;
+            }
+            else if (click == 1) {
+                document.getElementById("dot").style.backgroundColor = "blue";
+                click++;
+            }
+            else if (click == 0) {
+                document.getElementById("dot").style.backgroundColor = "red";
+                click++;
+            }
+        }
+        const ballon = () => {
+            document.getElementById("dot").style.height = size + "px";
+            document.getElementById("dot").style.width = size + "px";
+            size += 10;
+            if (click == 0) {
+                document.getElementById("dot").style.backgroundColor = "green";
+                click++;
+            }
+            else if (click == 1) {
+                document.getElementById("dot").style.backgroundColor = "blue";
+                click++;
+            }
+            else if (click == 2) {
+                document.getElementById("dot").style.backgroundColor = "red";
+                click = 0;
+            }
+            if (size >= 420 ) {
+                document.getElementById("dot").style.visibility="hidden";
+                size = 200;
+                document.getElementById("dot").style.visibility="visible";
+            }
+        }
+        document.getElementById("dot").addEventListener(
+            "click",   
+            ballon
+        )
+        document.getElementById("dot").addEventListener(
+            "mouseleave",   
+            anim_out
+        )
+    </script>
+</body>
+</html>
