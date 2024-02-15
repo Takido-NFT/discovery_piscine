@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="left">
+        <select name="operators" id="operators-select">
+            <option value="Choose an operator">Select operator</option>
+            <option value="+" id="+">+</option>
+            <option value="-" id="-">-</option>
+            <option value="*" id="*">*</option>
+            <option value="/" id="/">/</option>
+            <option value="%" id="%">%</option>
+        </select>
+        <input type="text" id="right">
+        <input type="submit" id="submition" value="Try me!">
+    </div>
+    <script>
+        var res = 0;
+        const calcul = () => {
+            var e = document.getElementById("operators-select");
+            var value = e.value;
+            let left = document.getElementById("left").value;
+            let right = document.getElementById("right").value;
+            console.log(left);
+            var res = 0;
+            left = parseInt(left, 10);
+            right = parseInt(right, 10);
+            if (left < 0 ) {
+                alert("Error :(");
+            }
+            if (value == "+") {
+                res = left + right;
+                alert(res);
+                console.log(res);
+            }
+            else if (value == "-") {
+                res = left - right;
+                alert(res);
+                console.log(res);
+            }
+            else if (value == "*") {
+                res = left * right;
+                alert(res);
+                console.log(res);
+            }
+            else if (value == "/") {
+                if (left == 0 || right == 0) {
+                alert("It's over 9000!");
+                return console.log("It's over 9000!");
+                }
+                res = left / right;
+                alert(res);
+                console.log(res);
+            }
+            else if (value == "%") {
+                if (left == 0 || right == 0) {
+                alert("It's over 9000!");
+                return console.log("It's over 9000!");
+                }
+                res = left % right;
+                alert(res);
+                console.log(res);
+            }
+        }
+        function timer(){
+            alert("Please, use me...\n Senpai.. I have been a good calculator *blushes*");
+        }
+        setInterval(
+            function(){timer()},
+            30000)
+        document.getElementById("submition").addEventListener(
+            "click",
+            calcul
+        )
+    </script>
+</body>
+</html>
