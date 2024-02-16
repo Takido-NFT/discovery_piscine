@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallax1 {
+    background-image: url("https://cdn.wallpapersafari.com/31/54/Hz7w8E.jpg");
+}
+
+.parallax2 {
+    background-image: url("https://cdn.discordapp.com/attachments/1207007832592089240/1208065677706141696/image.png?ex=65e1edd6&is=65cf78d6&hm=108c4a31f92db4d99a8d83e4ad06bd009853d5d32044216fba5a7287ea6a395a&");
+}
+
+.parallax3 {
+    background-image: url("https://cdn.discordapp.com/attachments/1207007832592089240/1208076304755462164/Screenshot_2024-02-16_at_16-43-15_Document.png?ex=65e1f7bc&is=65cf82bc&hm=46858722342d21fe8c8162fc456a6abdc6c4a36b7482339455e720aed052fc48&");
+}
+
+.parallax4 {
+    background-image: url("https://cdn.discordapp.com/attachments/1207007832592089240/1208086917011345448/Screenshot_2024-02-16_at_17-25-54_Document.png?ex=65e2019e&is=65cf8c9e&hm=3a841f211a6f53a1c0aa85d16d6dd25733189f69154dc108355f79531d9366f3&");
+}
+
+.parallax5 {
+    background-image: url("https://cdn.discordapp.com/attachments/1207007832592089240/1208067010513207326/image.png?ex=65e1ef14&is=65cf7a14&hm=18c3c7bd797eaca2865ac2ba2ad50d004668281dabf3c39c05e366238b11e7f4&");
+}
+
+.parallax6 {
+    background-image: url("https://cdn.discordapp.com/attachments/1207007832592089240/1208078731898519602/Screenshot_2024-02-16_at_16-53-17_Document.png?ex=65e1f9fe&is=65cf84fe&hm=7dff062366e8fd1e2b50b128fa59bb536bd7f89b50d7f8d18e366f7766f7acd6&");
+}
+
+.parallax7 {
+    background-image: url("https://cdn.discordapp.com/attachments/1207007832592089240/1208085778656399452/Screenshot_2024-02-16_at_17-21-19_Document.png?ex=65e2008e&is=65cf8b8e&hm=3c15e3b8c6caee58789b5b495197a4d91389e8ef12d5806dfad06c9e0ca1a121&");
+}
+
+.img1 {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: transparent;
+}
+
+.img2 {
+    color: black;
+    position: absolute;
+    top: 190%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: transparent;
+}
+
+.img4 {
+    color: black;
+    position: absolute;
+    top: 355%;
+    left: 60%;
+    transform: translate(-50%, 50%);
+    background-color: transparent;
+}
+
+.img7 {
+    color: black;
+    position: absolute;
+    top: 653.7%;
+    left: 55%;
+    transform: translate(-50%, 50%);
+    background-color: transparent;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    top: 0px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    width: 25%;
+    text-align: center;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.sous {
+    display: none;
+    box-shadow: 0px 1px 2px #ccc;
+    background-color: white;
+}
+
+nav > ul li:hover .sous {
+    display: block;
+}
+
+.sous li {
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a {
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous a:hover {
+    border-bottom: none;
+    background-color: gray;
+}
+
+.sous {
+    display: none;
+    box-shadow: 0px 1px 2px #ccc;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+#btn1 {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, 50%);
+}
+
+#btn2 {
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, 50%);
+}
+
+h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+h4 {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.dropdown-menu {width:100%; left:50%; margin-left:-100px;}
